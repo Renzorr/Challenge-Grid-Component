@@ -56,7 +56,7 @@ main {
   overflow: hidden;
   margin: 20px;
   cursor: pointer;
-  transition: .5s;
+  transition: 1.5s;
 }
 .container:hover {
   transform: scale(1.05);
