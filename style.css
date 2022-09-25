@@ -58,7 +58,7 @@ main {
   transition: 1.5s;
 }
 .container:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
   box-shadow: 5px 5px 30px rgba(12, 12, 12, 0.719);
 }
 .top,
@@ -69,7 +69,7 @@ main {
 .top {
   background: var(--White);
 }
-.top h2 {
+.top h1 {
   color: var(--Cyan);
   margin-bottom: 15px;
   font-weight: bold;
@@ -160,19 +160,26 @@ main {
   font-weight: 900;
   color: var(--LightGray);
 }
-.click::before {
+.click1::before,
+.click2::before {
   content: "";
   position: absolute;
   height: 15px;
   width: 15px;
   background-color: #207c7b;
-  bottom: 40%;
-  left: 46%;
   transform: rotate(45deg);
+  transition: 0.2s;
+  bottom: 40%;
   opacity: 0;
-  transition: 0.3s;
 }
-.click::after {
+.click1::before {
+  left: 46%;
+}
+.click2::before {
+  right: 5%;
+}
+.click1::after,
+.click2::after {
   padding-top: 7px;
   content: "Click me";
   font-weight: 100;
@@ -181,13 +188,20 @@ main {
   border-radius: 15px;
   background-color: #207c7b;
   position: absolute;
+  transition: 0.2s;
   bottom: 0%;
-  left: 35%;
   opacity: 0;
-  transition: 0.3s;
 }
-.click:hover::after,
-.click:hover::before {
+.click1::after {
+  left: 35%;
+}
+.click2::after {
+  right: -5%;
+}
+.click2:hover:after,
+.click2:hover::before,
+.click1:hover::after,
+.click1:hover::before {
   transition: 0.3s;
   opacity: 1;
 }
