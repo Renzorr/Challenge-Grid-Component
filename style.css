@@ -11,7 +11,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   font-family: "Karla", sans-serif;
   font-weight: bold;
 }
@@ -21,7 +21,7 @@ h2 {
 li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
 }
 main {
@@ -148,16 +148,50 @@ main {
   opacity: 0.7;
   font-size: 15px;
 }
-.attribution{
-  margin: 25px;
+.attribution {
+  margin: 25px 25px 60px 25px;
   text-align: center;
   font-weight: 100;
   color: #c0df34;
   font-size: 14px;
+  height: 70px;
+  position: relative;
 }
-.attribution a{
+.attribution a {
   font-weight: 900;
   color: var(--LightGray);
+}
+
+.click::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  background-color: #207c7b;
+  bottom: 40%;
+  left: 46%;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: 0.3s;
+}
+.click::after {
+  padding-top: 7px;
+  content: "Click me";
+  font-weight: 100;
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #207c7b;
+  position: absolute;
+  bottom: 0%;
+  left: 35%;
+  opacity: 0;
+  transition: 0.3s;
+}
+.click:hover::after,
+.click:hover::before {
+  transition: 0.3s;
+  opacity: 1;
 }
 @media (min-width: 600px) {
   h2 {
@@ -178,7 +212,7 @@ main {
     font-size: 16px;
     margin-bottom: 30px;
   }
-  .attribution{
+  .attribution {
     font-size: 15px;
   }
 }
@@ -204,7 +238,7 @@ main {
   .bottom li {
     font-size: 16px;
   }
-  .attribution{
+  .attribution {
     font-size: 17px;
   }
 }
