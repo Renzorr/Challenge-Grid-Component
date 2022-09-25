@@ -51,7 +51,6 @@ main {
   display: grid;
   grid-template-columns: 260px;
   grid-template-rows: 2fr 2fr 2fr;
-  background: red;
   border-radius: 5px;
   overflow: hidden;
   margin: 20px;
@@ -153,7 +152,7 @@ main {
   text-align: center;
   font-weight: 100;
   color: #c0df34;
-  font-size: 14px;
+  font-size: 13px;
   height: 70px;
   position: relative;
 }
@@ -161,7 +160,6 @@ main {
   font-weight: 900;
   color: var(--LightGray);
 }
-
 .click::before {
   content: "";
   position: absolute;
@@ -198,6 +196,7 @@ main {
     font-size: 24px;
   }
   .container {
+    margin-top: 9rem;
     grid-template-columns: repeat(2, 320px);
     grid-template-rows: 0.5fr 1fr;
   }
